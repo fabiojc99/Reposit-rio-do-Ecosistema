@@ -1,0 +1,16 @@
+#Pce0=50000
+#Rce=1
+#PCemax=100000
+#Mce = 5
+#Pco0 = 50
+#PComax = 1000
+#Mco = 2
+#Plo0 = 5
+#PLomax = 100
+#Mlo = 0.0005
+
+Ecosistema={"Pce0":50000,"Pco0":50,"Plo0":5}
+def evoluir_populacao_coelhos (Pco,Pce,Mce,Pcomax,Mco,Plo):
+    Nco=(Pce/Mco*Plo)
+    PcoAfter=Pco+(Nco*(1-(Pco/Pcomax)))-(Mco*Plo)
+    return PcoAfter
