@@ -14,7 +14,7 @@ Plo0 = 5
 Plomax = 100
 Mlo = 0.0005
 
-param={"Pce0":50000,"Pco0":50,"Plo0":5}
+Eco={"Pce0":50000,"Pco0":50,"Plo0":5}
 def evoluir_populacao_cenouras (Pce,Rce,Pcemax,Mce,Pco):
     PceAfter=Pce+(Rce*Pce)*(1-(Pce/Pcemax))-(Mce*Pco)
     return PceAfter
@@ -22,7 +22,6 @@ print(evoluir_populacao_cenouras(5000,1,100000,5,50))
 
 #Aqui começa a Etapa 2
 
-Ecosistema={"Pce0":50000,"Pco0":50,"Plo0":5}
 def evoluir_populacao_coelhos (Pco,Pce,Mce,Pcomax,Mco,Plo):
     Nco=(Pce/Mco*Plo)
     PcoAfter=Pco+(Nco*(1-(Pco/Pcomax)))-(Mco*Plo)
