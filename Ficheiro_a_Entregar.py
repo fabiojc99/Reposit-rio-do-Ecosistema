@@ -29,6 +29,11 @@ def evoluir_populacao_coelhos (Pco,Pce,Mce,Pcomax,Mco,Plo):
     return PcoAfter
 
 #Aqui começa a Etapa 3
+def evoluir_populacao_lobos (Plo,Pco,Mco,Plomax,Mlo):
+    Nlo=(Pco/(Mco*Plo))
+    PloAfter=Plo+Nlo*(1-(Plo/Plomax))-(Mlo*Plo)
+    return PloAfter
+
 #Aqui começa a Etapa 4
 #Aqui começa a Etapa 5
 #Aqui começa a Etapa 6
