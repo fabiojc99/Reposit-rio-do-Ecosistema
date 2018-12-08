@@ -23,7 +23,7 @@ def evoluir_populacao_cenouras (Pce,Rce,Pcemax,Mce,Pco):
 #Aqui começa a Etapa 2
 
 def evoluir_populacao_coelhos (Pco,Pce,Mce,Pcomax,Mco,Plo):
-    Nco=(Pce/Mce*Pco)
+    Nco=(Pce/(Mce*Pco))
     PcoAfter=Pco+Nco*(1-(Pco/Pcomax))-(Mco*Plo)
     return round(PcoAfter)
 
