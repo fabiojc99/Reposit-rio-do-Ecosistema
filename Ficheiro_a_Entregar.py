@@ -46,10 +46,16 @@ def simular_populacoes (num_meses,param):
     Plo0=5
     Plomax=100
     Mlo=0.0005
+    FinalList=[]
     while Iteration<num_meses:
         CenourasIntermidiate=evoluir_populacao_cenouras (Pce0,Rce,Pcemax,Mce,Pco0)
         CoelhosIntermidiate=evoluir_populacao_coelhos (Pco0,Pce0,Mce,Pcomax,Mco,Plo0)
         LobosIntermidiate=evoluir_populacao_lobos (Plo0,Pco0,Mco,Plomax,Mlo)
+        Iteration=eval(Iteration)
+        Pce0=eval(Pce0)
+        Pco0=eval(Pco0)
+        Plo0=eval(Plo0)
+        FinalList.append('Mês'+Iteration+':'+Pce0+'cenouras,'+Pco0+'coelhos,'+Plo0+'lobos')
         Iteration+=1
         print(CenourasIntermidiate)
         Pce0=CenourasIntermidiate
@@ -58,8 +64,7 @@ def simular_populacoes (num_meses,param):
     param[Pce0]=int(Pce0)
     param[Pco0]=int(Pco0)
     param[Plo0]=int(Plo0)
-    FinalString='Mês',str(num_meses),':',str(param[Pce0]),'cenouras,',str(param[Pco0]),'coelhos,',(param[Plo0]),'lobos'
-    return FinalString
+    return FinalList
 print(simular_populacoes (Months,Eco))
 
 #Aqui começa a Etapa 5
