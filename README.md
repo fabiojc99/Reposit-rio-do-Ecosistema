@@ -5,5 +5,5 @@ Pomos cada etapa separada no repositório e juntamos ao ficheiro final a parte d
 
 Vamos juntando ao ficheiro a entregar etapa a etapa
 Fábio=6 e 9
-Gonçalo=5 e 7
-Miguel= 4 e 8
+Gonçalo=5 e 8
+Miguel= 4 e 7
